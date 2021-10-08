@@ -1,0 +1,71 @@
+* {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+*:focus {
+	outline: none;
+}
+
+html, body {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	background-attachment: fixed;
+	background-position: left top; 
+}
+
+#root {
+	width: inherit;
+	height: inherit;
+}
+
+.app-container {
+	width: inherit;
+	height: inherit;
+}
+
+.statusbar {
+	box-shadow: inset 0 100px 100px -100px rgba(0,0,0,0.85);
+	height: 120px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	z-index: 9999;
+}
+
+.loadingOverlay {
+	width: 100%;
+	height: 100vh;
+	background-color: #000;
+	z-index: 99999999;
+	color: white;	position: absolute;
+}
+
+.main-body {
+
+}
+
+.large-padded {
+	position: relative;
+	top: 20px;
+	width: inherit;
+	height: calc(100vh - 120px);
+}
+
+.small-padded {
+	position: absolute;
+	top: 80px;
+	width: inherit;
+	height: calc(100vh - 80px);
+}
+
+.heading {
+	color: white;
+	text-align: center;
+	height: 80px;
+	padding: 0px;
+	margin: 0px;
+	line-height: 110px;
+}

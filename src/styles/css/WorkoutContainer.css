@@ -1,0 +1,43 @@
+.workout-container {
+	padding: 20px 0px;
+	min-height: 100vh;
+}
+
+.workouts {
+	padding-top: 30px;
+}
+
+.right-side-buttons {
+	position: fixed;
+	right: 0px;
+
+	z-index: 9999999
+}
+
+.right-side-buttons div {
+	display: inline-block;
+	padding: 8px 15px;
+	margin: 5px;
+	color: #fff;
+	background-color: #000;
+}
+
+.right-side-buttons div:last-child {
+	width: 34px;
+	height: 34px;
+	vertical-align: top;
+	text-align: center;
+	line-height: 34px;
+	padding: 0px;
+	transform: rotate(0deg);
+	transition: transform .1s ease-in-out;
+}
+
+.right-side-buttons div.compact {
+	transform: rotate(90deg);
+}
+
+.right-side-buttons.disabled {
+	pointer-events: none;
+	opacity: .3;
+}

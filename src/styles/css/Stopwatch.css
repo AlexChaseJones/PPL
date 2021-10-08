@@ -1,0 +1,114 @@
+@font-face {
+	font-family: "bpmono";
+	font-style: normal;
+	src: url("../fonts/BPmono.ttf") format("truetype");
+}
+
+.stopwatch-container {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 120px;
+	padding-top: 34px;
+	box-sizing: border-box;
+	background-color: rgba(0,0,0,1);
+	z-index: 999;
+	transition: top 0.2s ease-out;
+	/*pointer-events: none;*/
+}
+
+.stopwatch {
+	width: 200%;
+	display: flex;
+	flex-direction: row;
+	transform: translate(0, 0);
+	transition: transform 0.2s ease-out;
+}
+
+.stopwatch-hidden {
+	top: -120px;
+}
+
+.page-one-active {
+	transform: translate(0, 0);
+}
+
+.stopwatch-container .page-one, .stopwatch-container .page-two {
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.startBtn {
+
+}
+
+.resetBtn {
+
+}
+
+.page-two-started {
+	display: flex;
+	width: 50%;
+	flex-direction: row;
+	justify-content: space-around;
+	color: white;
+	text-align: center;
+}
+
+.page-two-started .totalTime {
+ flex: 3;
+ font-size: 2em;
+ font-family: bpmono;
+ border: 2px solid white;
+ margin: 0px 10px 0px 20px;
+ height: 75px;
+ line-height: 75px;
+ box-sizing: border-box;
+}
+
+.page-two-started .btn {
+	flex: 1;
+	height: 75px;
+	margin: 0px 20px 0px 10px;
+	padding-top: 17px;
+	box-sizing: border-box;
+	border: 2px solid white;
+}
+
+.page-two .btn {
+	border-radius: 5px;
+	height: 75px;
+	line-height: 75px;
+	text-align: center;
+	font-size: 2em;
+	width: 80%;
+
+	color: white;
+	border: 2px solid white;
+}
+
+.timeLeftContainer {
+	border: 2px solid white;
+	color: white;
+	width: 180px;
+	height: 75px;
+	line-height: 75px;
+	text-align: center;
+	font-size: 1.8em;
+	font-family: bpmono;
+	box-sizing: border-box;
+}
+
+.page-one .btn {
+	width: 75px;
+	height: 75px;
+	border-radius: 40px;
+	line-height: 75px;
+	text-align: center;
+	border: 2px solid white;
+	box-sizing: border-box;
+	color: white;
+}

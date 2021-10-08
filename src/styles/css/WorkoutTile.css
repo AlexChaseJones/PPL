@@ -1,0 +1,303 @@
+@font-face {
+	font-family: "Helvetica-Neue";
+	font-style: normal;
+	src: url("../fonts/helvetica/HelveticaNeue-02.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Helvetica-Neue-Med";
+	font-style: normal;
+	src: url("../fonts/helvetica/HelveticaNeue-Medium.ttf") format("truetype");
+}
+
+.tile-container {
+	font-family: "Helvetica-Neue";
+	width: 90%;
+	margin: 20px 5%;
+	position: relative;
+}
+
+.workout-menu {
+	background-color: #fff;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 60px;
+	width: 75%;
+	z-index: 1000;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	display: block;
+}
+
+.workout-menu div {
+	border: 2px solid #000;
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 13px;
+	border-radius: 5px;
+	margin: 10px 0px 0px 10px; 
+	width: 65px;
+	text-align: center;
+	opacity: 1;
+	background-color: rgba(180,0,0,.8);
+	color: rgba(255,255,255,.95);
+}
+
+.workout-menu div.disabled {
+	opacity: .5;
+	pointer-events: none;
+}
+
+.workout-menu div:last-child {
+	background-color: #ccc;
+	color: #000;
+}
+
+.tile-container.hidden .workout-menu {
+	display: none;
+}
+
+.tile-container.hidden .header h1, .tile-container.hidden .header h2 {
+	display: block;
+}
+
+
+
+.tile {
+	min-height: 156px;
+	position: relative;
+	border: 2px solid #000;
+	border-radius: 7px;
+	background-color: #fff;
+	box-shadow: 2px 3px;
+	overflow: hidden;
+}
+
+.header {
+	padding: 15px 0px 5px 15px;
+	height: 55px;
+}
+
+.header.menu-visible {
+	background-color: rgba(0,0,0,.2);
+}
+
+.header h1 {
+	display: none;
+	font-size: 1.5em;
+	font-family: "Helvetica-Neue-Med";
+	margin: 0px 0px 0px 0px;
+}
+
+.header h2 {
+	display: none;
+	font-size: 1.1em;
+	font-weight: lighter;
+	margin: 0px 0px 0px 50px;
+	text-transform: uppercase;
+	font-style: italic;
+
+}
+
+.hidden .horizontal-break {
+	border-top: 1px solid rgba(0,0,0,.25);
+}
+
+.horizontal-break {
+	height: 1px;
+	border-top: 1px solid rgba(0,0,0,.0);
+	width: 90%;
+	margin: 0 5%;
+}
+
+.info-container {
+	position: absolute;
+	top: -50px;
+	right: -50px;
+	transform: rotate(45deg);
+	background-color: #ccc;
+	width: 100px;
+	height: 100px;
+}
+
+.info-container p {
+	margin: 0;
+	top: 62px;
+	right: -36px;
+	font-family: "Helvetica-Neue-Med";
+	font-size: 1.3em;
+	border: 2px dotted rgba(0,0,0,.2);
+	color: rgba(0,0,0,.5);
+	border-radius: 30px;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	transform: rotate(-45deg);
+	position: relative;
+}
+
+.tile-body {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.tile-body h3 {
+	margin: 5px 0px 0px 0px;
+	text-align: center;
+	font-size: 1em;
+}
+
+.sets {
+	flex: 1;
+	margin: 0px 0px 10px 0px;
+}
+
+.sets > div {
+	height: calc(90% - 18px);
+	border-right: 1px solid rgba(0,0,0,.25);
+}
+
+.sets p {
+	margin: 1px 0px 5px 20px;
+
+}
+
+
+.notes {
+	flex: 2;
+	margin: 0px 0px 10px 0px;
+}
+
+.notes textarea {
+	width: 90%;
+	height: calc(90% - 18px);
+	padding: 10px;
+	box-sizing: border-box;
+	font-size: .9em;
+	margin: 0px 5%;
+	background-color: rgba(0,0,0,.5);
+	box-shadow: 0px 0px 105px 1px rgba(0,0,0,.1) inset, 0px 0px 5px 1px rgba(0,0,0,.3) inset;;
+}
+
+.tile-footer {
+	border: 2px solid #000;
+	border-top: 2px dotted rgba(0,0,0,.1);
+	width: 80%;
+	height: 45px;
+	position: relative;
+	left: 15px;
+	top: -2px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #fff;
+	box-shadow: 2px 3px;
+	border-bottom-right-radius: 7px;
+	border-bottom-left-radius: 7px;
+
+}
+
+.tile-footer input {
+	flex: 1;
+	max-width: 60px;
+	text-align: center;
+	font-size: 1.5em;
+	/*line-height: 30px;*/
+	height: 20px;
+	border: none;
+	border-bottom: 1px solid rgba(0,0,0,.20);
+	border-radius: 0px;
+	font-family: "HelveticaNeue"
+}
+
+input::-webkit-input-placeholder {
+	font-size: .8em;
+	line-height: 2em;
+
+}
+
+.tile-footer div {
+	flex: 1;
+	font-size: .8em;
+	text-align: center;
+	max-width: 70px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 5px;
+	border: 1.6px solid #000;
+}
+
+.compact .notes {
+	display: none;
+}
+
+.compact .tile-container {
+	width: 40%;
+	display: inline-block;
+}
+
+.compact .workout-menu div {
+	margin: 3px 0px;
+}
+
+.compact .workout-menu {
+	top: 35px;
+	left: 4;
+	right: 4px;
+	text-align: center;
+	width: calc(100% - 4px);
+	height: auto;
+}
+
+.compact .info-container {
+	background-color: rgba(0,0,0,0);
+}
+
+.compact .header {
+	padding: 10px;
+	width: calc(100% - 40px);
+	height: auto;
+}
+
+.compact .header h1 {
+	font-size: 1.1em;
+}
+
+.compact .header h2 {
+	font-size: .9em;
+	text-align: center;
+	margin-left: 15px;
+}
+
+.compact .tile-footer {
+	flex-direction: column;
+	height: auto;
+	left: 9%;
+}
+
+.compact .tile-footer input {
+	height: auto;
+	display: inline-block;
+	float: left;
+}
+
+.compact .tile-footer div {
+	width: 60%;
+	margin: 10px 0;
+}
+
+.compact .tile-container.hidden .horizontal-break {
+	border-top: 1px solid rgba(0,0,0,.25);
+}
+
+.compact .tile-container.hidden .sets {
+	color: #000;
+}
+
+.compact .tile-container .sets {
+	color: #fff;
+}
